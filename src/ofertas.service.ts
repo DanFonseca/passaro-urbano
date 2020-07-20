@@ -62,7 +62,12 @@ export class OfertaService{
 
   public getOfertasPromisses () : Promise<Oferta[]> {
     return new Promise ((resolve, reject)=> {
-      resolve(this.ofertas)
+      let teste = false;
+      if(teste){
+        resolve(this.ofertas)
+      }else{
+        reject ({erro: 404, mgg: 'error no servidor'})
+      }
     })
   }
 
