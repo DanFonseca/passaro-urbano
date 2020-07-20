@@ -19,7 +19,9 @@ export class HomeComponent implements OnInit {
       this.oferta.getOfertasPromisses()
                   .then ( (conteudo : Oferta [])  => {
                     this.ofertas = conteudo
-                  }, erro => {console.log(erro)}
-                  )
+                  }
+                  ).catch (retorno => {
+                    console.log(retorno)
+                  })
   }
 }
