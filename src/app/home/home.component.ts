@@ -18,6 +18,7 @@ export class HomeComponent implements OnInit {
     //utilizando promise para pegar as ofertas.
       this.oferta.getOfertasPromisses()
                   .then ( (conteudo : Oferta [])  => {
+                    console.log('executando após 3 segundos');
                     this.ofertas = conteudo
                   }
                   ).catch (retorno => {
