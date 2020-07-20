@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
   constructor(public oferta : OfertaService) { }
 
   ngOnInit(): void {
+    //utilizando promise para pegar as ofertas.
       this.oferta.getOfertasPromisses()
                   .then ( (conteudo : Oferta [])  => {
                     this.ofertas = conteudo
