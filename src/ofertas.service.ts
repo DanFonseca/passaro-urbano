@@ -8,10 +8,7 @@ export class OfertaService{
 
   constructor(private http: HttpClient){}
 
-   getOfertas() : Promise<any>{
-     return this.http.get<Oferta[]>('http://localhost:3000/ofertas').toPromise();
+   getOfertas(categoria: string) : Promise<any>{
+     return this.http.get<Oferta[]>(`http://localhost:3000/ofertas?categoria=${categoria}`).toPromise();
   }
-
-
-
 }
